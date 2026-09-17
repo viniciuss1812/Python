@@ -20,8 +20,7 @@ plt.rcParams['font.size'] = 11
 plt.rcParams['axes.titlesize'] = 14    
 plt.rcParams['axes.labelsize'] = 12
 
-GOOGLE_API_KEY = "AQ.Ab8RN6LCFKNwVA3CjH7zS_LbP6DAB9aezENUmTGsz0yFUxFGug"
-client = genai.Client(api_key=GOOGLE_API_KEY)
+#client = genai.Client(api_key=GOOGLE_API_KEY)
 
 
 class RelatorioService:
