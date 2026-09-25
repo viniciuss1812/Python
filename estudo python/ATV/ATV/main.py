@@ -1,32 +1,39 @@
 def checarprimo (numero):
-    resultado = numero%2
-    if resultado == 0:
-      return print ("O numero é primo")
+    try:
+      resultado = numero%2
 
-    else:
-      return print("Não é primo")
+      if resultado == 0:
+       return print ("O numero é primo")
+      else:
+       return print("Não é primo")
+      
+    except ValueError:
+      
+      print("Digite apenas números!")
+
 
 
 def imc(peso, altura):
-   
+  try: 
+   calculoimc = (altura*altura)/ peso
+   return print("O IMC é",calculoimc)
+  except:
+    print ("ERRO", Exception)
 
+
+   
 def calculardesconto(oreco):
+  return 0
 
 
 def convertertemp(temp):
-
-
-
-
-
-
+  return 0
 
 
 
 def main():
-
  
- numero = int(input("Escolha um npumero do menu"))
+ numero = int(input("Escolha um numero do menu"))
  if numero> 4:
    print ("Error")
 
@@ -55,8 +62,7 @@ def main():
      resposta = input("Deseja contunuar?")
      continue
 
-   
-
+  
     if numero == 4:
      print ("Função converter_temperatura")
      num = int(input("Digite o número"))
@@ -64,6 +70,9 @@ def main():
      resposta = input("Deseja contunuar?")
      continue
 
+
+if __name__ =="__main__":
+  main()
    
 
      
