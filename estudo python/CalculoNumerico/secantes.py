@@ -48,6 +48,15 @@ def F7(h):
     R = 3
     return (pi*h**2 *((3*R - h)/3)) -V
 
+def Fprova(c):
+    G = 9.8
+    m = 110
+    V = 40
+    t = 7
+    e = 2.718281828
+
+    return ((G * m * (1 - e**(-t * (c/m)))) / c) - V
+
 def secante(f, x0, x1, tolerancia):
     auxiliarinteracoes = 0
     erros = []
@@ -95,11 +104,12 @@ if __name__ == "__main__":
     x0 = float(input("defina o primeiro chute: "))
     x1 = float(input("defina o segundo chute: "))
     tolerancia = 0.00001
-
-    secante(f=F, x0=x0, x1=x1, tolerancia=tolerancia)
+    tolerancia2 = 0.000001
+    #secante(f=F, x0=x0, x1=x1, tolerancia=tolerancia)
     #secante(f=F2, x0=x0, x1=x1, tolerancia=tolerancia)
     #secante(f=F3, x0=x0, x1=x1, tolerancia=tolerancia)
     #secante(f=F4, x0=x0, x1=x1, tolerancia=tolerancia)
     #secante(f=F5, x0=x0, x1=x1, tolerancia=tolerancia)
     #secante(f=F6, x0=x0, x1=x1, tolerancia=tolerancia)
     #secante(f=F7, x0=x0, x1=x1, tolerancia=tolerancia)
+    secante(f=Fprova, x0=x0, x1=x1, tolerancia=tolerancia2)
